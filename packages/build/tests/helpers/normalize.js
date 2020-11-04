@@ -65,6 +65,8 @@ const NORMALIZE_REGEXPS = [
   [/\snpm ERR! 404([^]*npm ERR! 404)?.*/g, ''],
   // Empty lines
   [/^ +$/gm, ''],
+  // Hexadecimal identifiers, like commit hash
+  [/[a-fA-F\d]{8,}/gm, 'HEXADECIMAL_ID'],
   // HTTP errors are shown differently in Node 8
   [/ \.\.\.:443/g, ''],
 ]

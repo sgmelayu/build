@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 'use strict'
 
 // All CLI flags
@@ -141,6 +143,11 @@ Default: true`,
     describe: 'Statsd port',
     hidden: true,
   },
+  offline: {
+    boolean: true,
+    describe: `Do not send requests to the Netlify API to retrieve site settings.
+Default: false`,
+  },
   buffer: {
     boolean: true,
     describe: 'Buffer output instead of printing it',
@@ -148,3 +155,4 @@ Default: true`,
 }
 
 module.exports = { FLAGS }
+/* eslint-enable max-lines */
